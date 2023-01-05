@@ -11,3 +11,19 @@
     --business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
     --personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat', sans-serif;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
+}
