@@ -3,6 +3,7 @@
     --business: #3A82EE;
     --personal: var(var(--primary));
     --light: #EEE;
+    --grey: #888;
     --dark: #313154;
     --danger: #FF5B57;
 
@@ -27,3 +28,30 @@ button {
     background: none;
     cursor: initial;
 }
+
+body {
+    background: var(--light);
+    color: var(--dark);
+}
+
+section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+h3 {
+    color: var(--dark);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+
+h4 {
+    color: var(--grey);
+    font-size: .875rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
