@@ -149,3 +149,95 @@ input:checked~.bubble::after {
 }
 
 /*? özel tasarım radio ve checkbox tıklama animasyonunu için yazılan kısım.*/
+
+.createTodo .options label div {
+    color: var(--dark);
+    font-size: 1.125rem;
+    margin-top: 1rem;
+}
+
+.createTodo input[type="submit"] {
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: #FFF;
+    background-color: var(--primary);
+    border-radius: .5rem;
+    box-shadow: var(--personal-glow);
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.createTodo input[type="submit"]:hover {
+    opacity: .75;
+}
+
+.todoList .list {
+    margin: 1rem 0;
+}
+
+.todoList .todoItem {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+}
+
+.todoItem label {
+    display: block;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.todoItem .todoContent {
+    /*? Listeye eklenen uzun yazıların input alanına tam sıgması için display="flex" yazıldı.  */
+    display: flex;
+    /*? Buttonların sağ yaslanması için flex="1 1 0%" yazıldı. */
+    flex: 1 1 0%;
+}
+
+.todoItem .todoContent input[type="text"] {
+    /*? Listeye eklenen uzun yazıların input alanına tam sıgması için yazıldı.  */
+    flex: 1 1 0%;
+}
+
+.todoItem .todoContent input {
+    color: var(--dark);
+    font-size: 1.125rem;
+}
+
+.todoItem .actions {
+    display: flex;
+    align-items: center;
+}
+
+.todoItem .actions button {
+    display: block;
+    padding: .5rem;
+    border-radius: .25rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.todoItem .actions button:hover {
+    opacity: .75;
+}
+
+.todoItem .actions .edit {
+    margin-right: .5rem;
+    background-color: var(--primary);
+}
+
+.todoItem .actions .delete {
+    background-color: var(--danger);
+}
+
+.todoItem.done .todoContent input {
+    text-decoration: line-through;
+}
