@@ -1,7 +1,7 @@
 :root {
     --primary: #EA40A4;
     --business: #3A82EE;
-    --personal: var(var(--primary));
+    --personal: var(--primary);
     --light: #EEE;
     --grey: #888;
     --dark: #313154;
@@ -55,3 +55,97 @@ h4 {
     margin-bottom: .5rem;
 }
 
+.greeting .title input {
+    margin-left: .5rem;
+    flex: 1 1 0%;
+    min-width: 0;
+}
+
+.greeting .title,
+.greeting .title input {
+    color: var(--dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.createTodo input[type="text"] {
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: var(--dark);
+    background-color: #FFF;
+    border-radius: .5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+}
+
+.createTodo .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.createTodo .options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: #FFF;
+    border-radius: .5rem;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+/*? Default radio ve checkbox kutularını gizledik. Çünkü özel tarasım kendi kutularımızı yapacağız. */
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
+}
+
+/*? Default radio ve checkbox kutularını gizledik. Çünkü özel tarasım kendi kutularımızı yapacağız. */
+
+.bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--business);
+    box-shadow: var(--business-glow);
+}
+
+.bubble.personal {
+    border-color: var(--personal);
+    box-shadow: var(--personal-glow);
+}
+
+/*? özel tasarım radio ve checkbox tıklama animasyonunu için yazılan kısım.*/
+.bubble::after {
+    content: "";
+    display: block;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    background-color: var(--business);
+    box-shadow: var(--business-glow);
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+}
+
+.bubble.bubble.personal::after {
+    background-color: var(--personal);
+    box-shadow: var(--personal-glow);
+}
+
+input:checked~.bubble::after {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+
+/*? özel tasarım radio ve checkbox tıklama animasyonunu için yazılan kısım.*/
