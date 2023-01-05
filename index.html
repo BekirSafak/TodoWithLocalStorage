@@ -5,11 +5,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Yapılacaklar Listesi - 2023</title>
 </head>
+
 
 <body>
 
+    <main class="app">
+
+        <!-- Greeting Start -->
+        <section class="greeting">
+            <h2 class="title">
+                Selamlar, <input type="text" id="name" placeholder="İsim">
+            </h2>
+        </section>
+        <!-- Greeting End -->
+
+        <!-- Create Todo Start -->
+        <section class="createTodo">
+            <h3>Yapılacaklar</h3>
+            <form id="newTodoForm">
+                <h4>Neler yapıyorsun?</h4>
+                <input type="text" name="content" id="content" placeholder="Online toplantıya katıl">
+
+
+                <h4>Kategori seç</h4>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="category" id="category1" value="Mesleki">
+                        <span class="bubble business"></span>
+                        <div>Mesleki</div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="category" id="category2" value="Kişisel">
+                        <span class="bubble personal"></span>
+                        <div>Kişisel</div>
+                    </label>
+                </div>
+
+                <input type="submit" value="Yapılcakları ekle">
+            </form>
+        </section>
+        <!-- Create Todo End -->
+
+        <!-- Todo List Start -->
+        <section class="todoList">
+            <h2>Yapılacaklar Listesi</h2>
+            <div class="list" id="todoList">
+                <div class="todoItem"><!-- Todo Business -->
+                    <label>
+                        <input type="checkbox">
+                        <span class="bubble business"></span>
+                    </label>
+
+                    <div class="todoContent">
+                        <input type="text" value="Online toplantıya katıl." readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit">Düzünle</button>
+                        <button class="delete">Sil</button>
+                    </div>
+                </div> <!-- Todo Business -->
+
+                <div class="todoItem"><!-- Todo Personal -->
+                    <label>
+                        <input type="checkbox">
+                        <span class="bubble personal"></span>
+                    </label>
+
+                    <div class="todoContent">
+                        <input type="text" value="Akşam yemeği için biber al." readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit">Düzünle</button>
+                        <button class="delete">Sil</button>
+                    </div>
+                </div><!-- Todo Personal -->
+            </div>
+        </section>
+        <!-- Todo List End -->
+    </main>
+
+
+
+    <script src="main.js"></script>
 </body>
 
 </html>
